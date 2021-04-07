@@ -47,12 +47,13 @@ export default createStore({
           let index=state.cartItems.findIndex(el=>el.id===payload.id)
           if(state.cartItems[index]["quantity"]!==0){
             state.cartItems[index]["quantity"] -=1
-            state.cartItemCount--
           }
 
 
         }
       }
+      state.cartItemCount--
+
     }
   },
 
